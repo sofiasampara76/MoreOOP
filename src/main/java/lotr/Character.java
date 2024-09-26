@@ -2,7 +2,6 @@ package lotr;
 
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
 //Constructor by ourselves or add AllArgsConstructor
 @Getter @Setter
