@@ -1,9 +1,24 @@
 package lotr;
 
-class CharacterFactory {
+import java.util.Random;
+
+public class CharacterFactory {
+
     public Character createCharacter() {
-        //method to create a random character
-        //added another line
-        return null;
+        Random random = new Random();
+        int randomNumber = random.nextInt(5);
+
+        switch (randomNumber) {
+            case 0:
+                return new Hobbit();
+            case 1:
+                return new Elf();
+            case 2:
+                return new King();
+            case 3:
+                return new Knight();
+            default:
+                return new Hobbit();
+        }
     }
 }

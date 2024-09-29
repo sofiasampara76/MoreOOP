@@ -1,10 +1,9 @@
 package lotr;
 
 import lombok.Getter;
-import lombok.Setter;
 
 //Constructor by ourselves or add AllArgsConstructor
-@Getter @Setter
+@Getter
 public abstract class Character {
 
     public Character(int hp, int power) {
@@ -24,6 +23,26 @@ public abstract class Character {
     @Override
     public String toString() {
         return this.getClass().getSimpleName() + "{hp=" + hp + ", power=" + power + "}";
+    }
+
+    public void setPower(int power) {
+        if (power <= 0) {
+            this.power = 0;
+        }
+        else {
+            this.power = power;
+        }
+        
+    }
+
+    public void setHp(int hp) {
+        if (hp <= 0) {
+            this.hp = 0;
+        }
+        else {
+            this.hp = hp;
+        }
+        
     }
 
 
